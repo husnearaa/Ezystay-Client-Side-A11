@@ -64,7 +64,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 setSuccess,
-                    swal("Good job!", "User Logged in Successfully!", "success");
+                Swal.fire("Good job!", "User Logged in Successfully!", "success");
 
 
                 // navigate after login 
@@ -85,8 +85,8 @@ const Login = () => {
                 className="absolute h-full w-full "
             />
             <div className=" absolute h-screen w-full place-items-center bg-black/60">
-                <h2 className="text-3xl my-10 font-bold pt-20 text-center text-white">Login</h2>
-                <form onSubmit={handleLogin} className="w-1/3 mx-auto text-center place-items-center">
+                <h2 className="text-3xl my-8 font-bold text-center text-white">Login</h2>
+                <form onSubmit={handleLogin} className="lg:w-1/3 md:w-1/3 w-4/5 mx-auto text-center place-items-center">
                     <div className="form-control">
                        
                         <input type="email" placeholder="Email" name="email" className="input input-bordered py-7 mb-5 rounded-full" required />
@@ -94,9 +94,9 @@ const Login = () => {
                     <div className="form-control">
                        
                         <input type="password" placeholder="Password" name="password" className="input input-bordered py-7 mb-5 rounded-full" required />
-                    
+                
                     </div>
-                    <div className="form-control mt-2">
+                    <div className="form-control">
                         <button className="btn bg-[#C2A973] text-white py-7 mb-5 rounded-full border-none">Sign In</button>
                     </div>
                     <div className="form-control">
@@ -113,7 +113,7 @@ const Login = () => {
                     success && <p className="text-green-600">{success}</p>
                 }
                 <p className="text-center mt-4 mb-20 pb-5 text-white text-sm">Don't have an Account? <Link
-                    className="text-white font-bold text-base" to='/register'>Register</Link></p>
+                    className="text-white font-bold text-base mb-10" to='/register'>Register</Link></p>
 
             </div>
         </div>

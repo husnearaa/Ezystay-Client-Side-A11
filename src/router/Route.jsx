@@ -9,6 +9,7 @@ import FAQ from "../pages/FAQ/FAQ";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -28,7 +29,7 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/myBookings',
-                element: <MyBookings></MyBookings>,
+                element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
             },
             {
                 path: '/gallery',

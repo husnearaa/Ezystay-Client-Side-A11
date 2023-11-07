@@ -61,8 +61,8 @@ const Register = () => {
                 className="absolute h-full w-full "
             />
             <div className=" absolute h-screen w-full place-items-center bg-black/60">
-                <h2 className="text-3xl my-10 font-bold pt-20 text-center text-white">Registration</h2>
-                <form onSubmit={handleRegister} className="w-1/3 mx-auto text-center place-items-center">
+                <h2 className="text-3xl my-10 font-bold text-center text-white">Registration</h2>
+                <form onSubmit={handleRegister} className="lg:w-1/3 md:w-1/3 w-4/5 mx-auto text-center place-items-center">
                     <div className="form-control">
                         <input type="text" placeholder="Name" name="name" className="input py-7 input-bordered rounded-full mb-5" required />
                     </div>
@@ -76,10 +76,10 @@ const Register = () => {
                     </div>
                     <div className="form-control">
                         
-                        <input type="password" placeholder="Password" name="password" className="input py-7 input-bordered rounded-full" required />
+                        <input type="password" placeholder="Password" name="password" className="input py-7 mb-5 input-bordered rounded-full" required />
                        
                     </div>
-                    <div className="form-control mt-6">
+                    <div className="form-control">
                         <button className="btn bg-[#C2A973] text-white py-7 mb-5 rounded-full border-none">Sign Up</button>
                     </div>
                 </form>
@@ -89,7 +89,7 @@ const Register = () => {
                 {
                     success && <p className="text-green-600">{success}</p>
                 }
-                <p className="text-center mt-4 mb-20 pb-5 text-white">Already have an Account? <Link
+                <p className="text-center text-white">Already have an Account? <Link
                     className="text-white font-bold" to='/login'>Login</Link>
                 </p>
             </div>
