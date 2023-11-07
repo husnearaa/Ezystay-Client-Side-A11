@@ -1,0 +1,33 @@
+[
+    {
+      "image": "https://i.ibb.co/VYk3pkR/room1.png",
+      "title": "Deluxe Suite",
+      "description": "Spacious suite with stunning city views."
+    },
+    {
+      "image": "https://i.ibb.co/5Wh9T18/room2.png",
+      "title": "Ocean View Room",
+      "description": "Relax by the sea in this cozy room."
+    },
+    {
+      "image": "https://i.ibb.co/fD0X04K/room3.png",
+      "title": "Family Suite",
+      "description": "Perfect for a family getaway with extra space."
+    },
+    {
+      "image": "https://i.ibb.co/4spddQW/room6.png",
+      "title": "Executive Room",
+      "description": "Ideal for business travelers with modern amenities."
+    },
+    {
+      "image": "https://i.ibb.co/w7TVR8W/room5.png",
+      "title": "Luxury suite",
+      "description": "Indulge in lavish comfort with our Luxury Suite"
+    },
+    {
+      "image": "https://i.ibb.co/nzGhJnM/room6.png",
+      "title": "Mountain View Chalet",
+      "description": "A rustic retreat with breathtaking mountain vistas."
+    }
+  ]
+  
