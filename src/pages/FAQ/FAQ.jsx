@@ -11,7 +11,8 @@ const FAQ = () => {
             </Helmet>
 {/* 
    <RoomDetailsCard></RoomDetailsCard> */}
-        </div>
+
+</div>
     );
 };
 

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Banner from "../../components/Banner/Banner";
 import Rooms from "../Rooms/Rooms";
 import Footer from "../../components/Footer/Footer";
+import FAQ from "../FAQ/FAQ";
 
 
 

@@ -11,6 +11,7 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import RoomDetails from "../pages/RoomDetails/RoomDetails";
+import DetailsRoom from "../pages/RoomDetails/DetailsRoom";
 
 
 
@@ -53,9 +54,9 @@ const myCreatedRoute = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/detailsroom/:id',
-                element: <RoomDetails></RoomDetails>,
-                loader: ({ params }) => fetch(`https://localhost:5000/details/${params.id}`)
+                path: '/details/:id',
+                element: <DetailsRoom></DetailsRoom>,
+                loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
             },
            
         ]

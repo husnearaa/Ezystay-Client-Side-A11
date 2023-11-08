@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 const RoomsCard = ({ room }) => {
 
-    const { _id,image, title, description, price } = room || {};
+    const { _id,image, title, description, price_per_night } = room || {};
 
     return (
         <div>
-            <Link to={`/detailsroom/${_id}`} >
+            <Link to={`/details/${_id}`} >
                 <Card className="w-full max-w-[26rem] shadow-lg rounded-none">
                     <CardHeader floated={false} color="blue-gray" className="rounded-none">
                         <img
@@ -30,7 +30,7 @@ const RoomsCard = ({ room }) => {
                             {description}
                         </Typography>
                         <Typography color="gray" className="flex items-center justify-between">
-                            Price: ${price}
+                            Price: ${price_per_night}
                         </Typography>
                     </CardBody>
                 </Card>
