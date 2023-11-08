@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import Banner from "../../components/Banner/Banner";
 import Rooms from "../Rooms/Rooms";
+import Footer from "../../components/Footer/Footer";
+
 
 
 
@@ -14,6 +16,7 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <Rooms></Rooms>
+            <Footer></Footer>
         </div>
     );
 };

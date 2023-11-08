@@ -1,0 +1,62 @@
+[
+    {
+        "image": "https://i.ibb.co/VYk3pkR/room1.png",
+        "title": "Deluxe Suite",
+        "size": "250 sq. ft.",
+        "price_per_night": 199.99,
+        "special_offer": "10% off for 3 nights or more",
+        "available_seats": "please select date for available seat",
+        "rating": "(0 reviews)",
+        "description": "Comfortable single room with a beautiful garden view."
+    },
+    {
+        "image": "https://i.ibb.co/5Wh9T18/room2.png",
+        "title": "Ocean View Room",
+        "size": "350 sq. ft.",
+        "price_per_night": 250.99,
+        "special_offer": "Free breakfast included",
+        "available_seats": "please select date for available seat",
+        "rating": "(0 reviews)",
+        "description": "Spacious double room with modern amenities."    
+    },
+    {
+        "image": "https://i.ibb.co/fD0X04K/room3.png",
+        "title": "Family Suite",
+        "size": "500 sq. ft.",
+        "price_per_night": 300.99,
+        "special_offer": "20% off for a weeklong stay",
+        "available_seats": "please select date for available seat",
+        "rating": "(0 reviews)",
+        "description": "Luxurious family suite with a stunning ocean view."
+    },
+    {
+        "image": "https://i.ibb.co/4spddQW/room6.png",
+        "title": "Executive Room",
+        "size": "430 sq. ft.",
+        "price_per_night": 280.99,
+        "special_offer": "20% off for a weeklong stay",
+        "available_seats": "please select date for available seat",
+        "rating": "(0 reviews)",
+        "description": "Luxurious family suite with a stunning ocean view."
+    },
+    {
+        "image": "https://i.ibb.co/w7TVR8W/room5.png",
+        "title": "Luxury suite",
+        "size": "450 sq. ft.",
+        "price_per_night": 350.99,
+        "special_offer": "20% off for a weeklong stay",
+        "available_seats": "please select date for available seat",
+        "rating": "(0 reviews)",
+        "description": "Indulge in lavish comfort with our Luxury Suite"
+    },
+    {
+        "image": "https://i.ibb.co/nzGhJnM/room6.png",
+        "title": "Mountain View Chalet",
+        "size": "350 sq. ft.",
+        "price_per_night": 270.99,
+        "special_offer": "Free breakfast included",
+        "available_seats": "please select date for available seat",
+        "rating":"(0 reviews)",
+        "description": "A rustic retreat with breathtaking mountain vistas."
+    }
+]
