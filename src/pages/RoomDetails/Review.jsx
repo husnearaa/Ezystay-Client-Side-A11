@@ -19,7 +19,7 @@ const Review = () => {
                     <Rating></Rating>
                 </div>
                 <div className="p-4 space-y-2 text-sm text-black">
-                    <p>Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu dictum lectus consequat vitae. Etiam ut dolor id justo fringilla finibus.</p>
+                    <p>Exceptional experience with Ezystay! Effortless booking, outstanding choices, and a delightful stay. Highly recommended!</p>
 
                 </div>
             </div>
