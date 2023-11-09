@@ -2,10 +2,11 @@
 
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProviders";
+import { AuthContext } from "../../providers/AuthProvider";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
+
 
 
 

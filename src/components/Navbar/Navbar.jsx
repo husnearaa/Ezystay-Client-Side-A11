@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProviders";
+import { AuthContext } from "../../providers/AuthProvider";
+
 
 
 
@@ -52,7 +53,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to="/myBookings"
+                            to="/bookings"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-[#C2A973] " : ""
                             }
@@ -82,7 +83,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
     
-                    <li>
+                    {/* <li>
                         <NavLink
                             to="/aboutUs"
                             className={({ isActive, isPending }) =>
@@ -91,7 +92,7 @@ const Navbar = () => {
                         >
                             AboutUs
                         </NavLink>
-                    </li>
+                    </li> */}
                     
                 </ul>     
                  {/* <button className="btn border-[#C2A973] text-black bg-white px-10 rounded-full">Login</button> */}

@@ -1,14 +1,48 @@
 import { useLoaderData } from "react-router-dom";
 import Review from "./Review";
 import Rating from "../../components/Rating/Rating";
+import { useContext } from "react";
+import { AuthContext } from '../../providers/AuthProvider'
 
 
 const DetailsRoom = () => {
 
     const data = useLoaderData();
     console.log(data);
-    const { title, image, size, price_per_night, special_offer, available_seats, rating, description } = data;
+    const { _id, title, image, size, price_per_night, special_offer, available_seats, rating, description } = data;
     console.log(price_per_night);
+
+    const { user } = useContext(AuthContext);
+
+    const handleBookRoom = event => {
+        event.preventDefault();
+
+        const form = event.target;
+        const date = form.date.value;
+
+        const booking = {
+            image,
+            title,
+            price_per_night,
+            date,
+            rating,
+            _id,
+        }
+        console.log(booking);
+
+        fetch('http://localhost:5000/bookings', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(booking)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
+
 
     return (
         <div>
@@ -43,14 +77,14 @@ const DetailsRoom = () => {
                                         Available Seat: {available_seats}
                                     </p>
                                     <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                                     <p>
-                                        Rating: {rating} <Rating></Rating>
-                                     </p>
+                                        <p>
+                                            Rating: {rating} <Rating></Rating>
+                                        </p>
                                     </p>
                                     <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                                         Description: {description}
                                     </p>
-                                    <form >
+                                    <form onSubmit={handleBookRoom} >
                                         Date: <input type="date" name="date" className="input input-bordered mb-3" id="" />
                                         <input type="submit" value="Book Now" className="block w-full select-none rounded-lg bg-[#C2A973] py-3.5 px-7
                                       text-center align-middle  text-sm font-bold  text-white" />
