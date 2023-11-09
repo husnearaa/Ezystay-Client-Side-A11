@@ -97,10 +97,10 @@ const Login = () => {
                 
                     </div>
                     <div className="form-control">
-                        <button className="btn border-[#C2A973] text-white py-7 mb-5 rounded-full border-none">Sign In</button>
+                        <button className="btn bg-[#C2A973] text-white py-7 mb-5 rounded-full border-none">Sign In</button>
                     </div>
                     <div className="form-control">
-                        <button onClick={handleGoogleSignIn} className="btn border-[#C2A973] text-white py-7 mb-5 rounded-full border-none">
+                        <button onClick={handleGoogleSignIn} className="btn bg-[#C2A973] text-white py-7 mb-5 rounded-full border-none">
                             <FcGoogle></FcGoogle>
                             Log in with Google
                         </button>
