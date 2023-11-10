@@ -3,6 +3,7 @@ import Review from "./Review";
 import Rating from "../../components/Rating/Rating";
 import { useContext } from "react";
 import { AuthContext } from '../../providers/AuthProvider'
+import Swal from "sweetalert2";
 
 
 const DetailsRoom = () => {
@@ -38,6 +39,7 @@ const DetailsRoom = () => {
         body: JSON.stringify(booking)
     })
         .then(res => res.json())
+        Swal.fire("Successfully Booked!", "Successfully booked room", "success")
         .then(data => {
             console.log(data);
         })
@@ -85,7 +87,7 @@ const DetailsRoom = () => {
                                         Description: {description}
                                     </p>
                                     <form onSubmit={handleBookRoom} >
-                                        Date: <input type="date" name="date" className="input input-bordered mb-3" id="" />
+                                        Date: <input type="date" name="date" className="input input-bordered mb-3" required id="" />
                                         <input type="submit" value="Book Now" className="block w-full select-none rounded-lg bg-[#C2A973] py-3.5 px-7
                                       text-center align-middle  text-sm font-bold  text-white" />
                                     </form >

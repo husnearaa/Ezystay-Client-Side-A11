@@ -87,7 +87,7 @@ const MyBookings = () => {
             </Helmet>
 
             {/* <h2>booking: {bookings.length}</h2> */}
-            <h2 className="text-5xl  text-center py-10">My Bookings</h2>
+            <h2 className="lg:text-5xl text-3xl  text-center py-10">My Bookings</h2>
 
             {
                 bookings.map(booking => <MyBookingCard

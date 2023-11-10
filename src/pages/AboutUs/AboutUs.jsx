@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import AddReview from "../../components/AddReview/AddReview";
 
 const AboutUs = () => {
     return (
@@ -8,6 +9,9 @@ const AboutUs = () => {
                 <title>AboutUs - Ezystay</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
+
+
+            <AddReview></AddReview>
         </div>
     );
 };

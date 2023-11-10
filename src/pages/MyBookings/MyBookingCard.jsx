@@ -17,7 +17,7 @@ const MyBookingCard = ({booking, handleDelete, handleBookingUpdate}) => {
                         <figure><img className="" src={image} /></figure>
                         <div className="flex justify-between items-center  w-full pr-4">
                             <div className="ml-5">
-                                <h2 className="card-title pb-4">{title}</h2>
+                                <h2 className="card-title pb-4 lg:text-xl text-base">{title}</h2>
                                 <p className="pb-1">Price Per Night: ${price_per_night}</p>
                                 {/* <p className="mb-3">{bookingRoom}</p> */}
                                 <button className="btn text-white bg-blue-500">your review</button>

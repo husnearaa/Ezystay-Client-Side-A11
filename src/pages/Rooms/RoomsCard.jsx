@@ -14,8 +14,8 @@ const RoomsCard = ({ room }) => {
     return (
         <div>
             <Link to={`/details/${_id}`} >
-                <Card className="w-full max-w-[26rem] shadow-lg rounded-none">
-                    <CardHeader floated={false} color="blue-gray" className="rounded-none">
+                <Card className="w-full max-w-[26rem] shadow-lg rounded">
+                    <CardHeader floated={false} color="blue-gray" className="rounded">
                         <img
                             src={image}
                         />

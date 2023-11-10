@@ -2,7 +2,7 @@ import Rating from "../../components/Rating/Rating";
 
 const Review = () => {
     return (
-        <div>
+        <div className="mt-20 pt-10">
             <h4 className="text-3xl text-center font-semibold">Review: </h4>
             <div className="container flex flex-col w-full max-w-lg p-6  border-3 border-black mx-auto divide-y shadow-xl mb-10 rounded-md">
                 <div className="flex justify-between p-4">

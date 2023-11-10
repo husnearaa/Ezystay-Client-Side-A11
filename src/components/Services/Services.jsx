@@ -3,7 +3,7 @@
 const Services = () => {
     return (
        <div className="bg-gray-100 py-10 mb-10 ">
-        <h2 className="text-center text-5xl font-bold ">Our <span className="text-[#C2A973]">Services</span></h2>
+        <h2 className="text-center lg:text-5xl text-3xl font-bold ">Our <span className="text-[#C2A973]">Services</span></h2>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 pt-10'>
             <div className="card border  bg-base-100 hover:bg-gray-100">
                 <figure className="">

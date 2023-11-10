@@ -2,7 +2,7 @@ const NewsLetter = () => {
   return (
     <div>
       <div>
-        <section className="bg-gray-100 mt-10 mb-10 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/4spddQW/room6.png)' }}>
+        <section className="bg-gray-100  mt-10 mb-10 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/4spddQW/room6.png)' }}>
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="relative">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-white">
