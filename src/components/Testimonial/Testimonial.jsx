@@ -1,13 +1,23 @@
 import {Rating} from "@material-tailwind/react";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const Testimonial = () => {
+
+
+    useEffect(() => {
+        Aos.init();
+    },[])
+
+
     return (
         <div>
             <div className="bg-gray-100 mb-10">
-                <h2 className="lg:text-5xl text-3xl font-bold py-10 text-center mt-15"> What Client <span className="text-[#C2A973]">Say</span></h2>
-                <div className="flex justify-around items-center flex-col lg:flex-row w-4/5 mx-auto ">
+                <h2 className="lg:text-5xl text-3xl font-bold py-10 text-center mt-10" data-aos="zoom-in"> What Client <span className="text-[#C2A973]">Say</span></h2>
+                <div className="flex justify-around items-center flex-col lg:flex-row w-4/5 mx-auto mt-8">
                     <div>
-                        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none mb-10 ">
+                        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border  shadow-none mb-10 " data-aos="zoom-out-right">
                             <div className="mb-6 p-0">
                                 <p className="block lg:text-lg text-base leading-relaxed text-inherit antialiased">
                                     I enjoyed my stay at this hotel. The room was spacious and well-appointed.
@@ -15,7 +25,7 @@ const Testimonial = () => {
                                     Overall, a great experience, and I'd recommend it to others.
                                 </p>
                             </div>
-                            <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 text-gray-700 shadow-none">
+                            <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8  shadow-none">
                                 <img
                                     src={"https://i.ibb.co/LSvBwMt/pic-2.png"}
                                     className="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
@@ -36,7 +46,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none mb-10 mt-20">
+                        <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border  shadow-none mb-10 " data-aos="zoom-out-left">
                             <div className="mb-6 p-0">
                                 <p className="block  lg:text-lg  text-base leading-relaxed text-inherit antialiased">
                                     I had an amazing stay at this hotel. The staff was incredibly friendly and accommodating.
@@ -44,7 +54,7 @@ const Testimonial = () => {
                                     I'll definitely be coming back on my next trip!
                                 </p>
                             </div>
-                            <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 text-gray-700 shadow-none">
+                            <div className="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 shadow-none">
                                 <img
                                     src={"https://i.ibb.co/QYdMX5j/t2.png"}
                                     className="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"

@@ -1,11 +1,20 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 
 const Services = () => {
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
+
     return (
        <div className="bg-gray-100 py-10 mb-10 ">
-        <h2 className="text-center lg:text-5xl text-3xl font-bold ">Our <span className="text-[#C2A973]">Services</span></h2>
+        <h2 className="text-center lg:text-5xl text-3xl font-bold " data-aos ="zoom-in-up">Our <span className="text-[#C2A973]">Services</span></h2>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 pt-10'>
-            <div className="card border  bg-base-100 hover:bg-gray-100">
+            <div className="card border  bg-base-100 hover:bg-gray-100"  data-aos = "fade-left">
                 <figure className="">
                     <img src={"https://i.ibb.co/72zMGmF/s2.png"} alt="" className=" mt-5 h-10 w-10" />
                 </figure>
@@ -16,7 +25,7 @@ const Services = () => {
                     customly designed swimming pool under a glass vault and a bath VIP-complex for six people.</p>
                 </div>
             </div>
-            <div className="card border bg-base-100 hover:bg-gray-100">
+            <div className="card border bg-base-100 hover:bg-gray-100"  data-aos = "fade-left">
                 <figure className="">
                     <img src={"https://i.ibb.co/tMmsRgG/s3.png"} alt="" className=" mt-5 h-10 w-10" />
                 </figure>
@@ -27,7 +36,7 @@ const Services = () => {
                      meeting room, facilities and guest rooms to hel you stay connected wherever you are</p>
                 </div>
             </div>
-            <div className="card border bg-base-100 hover:bg-gray-100">
+            <div className="card border bg-base-100 hover:bg-gray-100"  data-aos = "fade-left">
                 <figure className="">
                     <img src={"https://i.ibb.co/mXHWRWy/s4.png"} alt="" className=" mt-5 h-10 w-10" />
                 </figure>
@@ -39,7 +48,7 @@ const Services = () => {
                      Here, you can taste some culinary masterpieces by our chef.</p>
                 </div>
             </div>
-            <div className="card border bg-base-100 hover:bg-gray-100">
+            <div className="card border bg-base-100 hover:bg-gray-100"  data-aos = "fade-left">
                 <figure className="">
                     <img src={"https://i.ibb.co/r2sjyf7/s5.png"} alt="" className=" mt-5 h-10 w-10" />
                 </figure>

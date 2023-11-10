@@ -4,10 +4,19 @@ import {
     CardBody,
     Typography,
 } from "@material-tailwind/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
+
 const RoomsCard = ({ room }) => {
+
+
+    useEffect(() =>{
+    Aos.init();
+    }, [])
 
     const { _id,image, title, description, price_per_night } = room || {};
 
@@ -15,7 +24,7 @@ const RoomsCard = ({ room }) => {
         <div>
             <Link to={`/details/${_id}`} >
                 <Card className="w-full max-w-[26rem] shadow-lg rounded">
-                    <CardHeader floated={false} color="blue-gray" className="rounded">
+                    <CardHeader floated={false} color="blue-gray" className="rounded" data-aos = "fade-right">
                         <img
                             src={image}
                         />

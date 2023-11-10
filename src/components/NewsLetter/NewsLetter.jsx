@@ -1,14 +1,24 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const NewsLetter = () => {
+
+useEffect(() =>{
+  Aos.init();
+},[])
+
+
   return (
     <div>
       <div>
-        <section className="bg-gray-100  mt-10 mb-10 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/4spddQW/room6.png)' }}>
+        <section className="bg-gray-100  mt-10 mb-10 relative bg-cover bg-center" style={{ backgroundImage: 'url(https://i.ibb.co/4spddQW/room6.png)' }} data-aos="zoom-out-up">
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="relative">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-white">
-              <div className="mx-auto max-w-screen-md sm:text-center">
-                <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Subscribe to our newsletter</h2>
-                <p className="mx-auto mb-8 text-lg font-light md:mb-12">
+            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-white" >
+              <div className="mx-auto max-w-screen-md sm:text-center" data-aos="fade-down">
+                <h2 className="mb-4 lg:text-3xl font-bold text-2xl">Subscribe to our newsletter</h2>
+                <p className="mx-auto mb-8 lg:text-lg text-sm font-light md:mb-12">
                   Leave your e-mail in the form below to sign up for our newsletter and receive regular
                   news, updates, and special offers.
                 </p>
