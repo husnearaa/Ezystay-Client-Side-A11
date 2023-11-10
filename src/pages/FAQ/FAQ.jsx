@@ -1,7 +1,16 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 
 const FAQ = () => {
+
+
+    useEffect(() => {
+        Aos.init();
+    },[])
+
     return (
         <div>
             <Helmet>
@@ -10,12 +19,12 @@ const FAQ = () => {
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="">
-                <h2 className="text-center text-4xl py-10 ">FAQ</h2>
+                <h2 className="text-center lg:text-4xl text-2xl py-10 ">FAQ</h2>
                 <div className=" w-4/5 rounded border px-4 py-10 mt-10 mb-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
                     <div className="grid md:grid-cols-5 gap-10">
                         <div className="md:col-span-2">
-                            <div className="">
+                            <div className="" data-aos = "zoom-in">
                                 <img className="h-[90vh]" src={"https://i.ibb.co/3f22s9C/13330330-Feb-Business-9.jpg"} alt="" />
                             </div>
                         </div>
@@ -24,7 +33,7 @@ const FAQ = () => {
                         <div className="md:col-span-3">
 
                             <section className="">
-                                <div className="container flex flex-col justify-center px-4 mx-auto md:p-8">
+                                <div className="container flex flex-col justify-center px-4 mx-auto md:p-8" data-aos="zoom-out-up">
                                     <h2 className="text-2xl font-semibold sm:text-2xl">Frequently Asked Questions</h2>
                                     <p className="mt-4 mb-8 ">Here has given most asked questions answer. It will help to know about Ezystay.</p>
                                     <div className="space-y-4">
