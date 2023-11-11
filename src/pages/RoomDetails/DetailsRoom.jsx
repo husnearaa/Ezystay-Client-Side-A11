@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Review from "./Review";
-import Rating from "../../components/Rating/Rating";
 import { useContext } from "react";
 import { AuthContext } from '../../providers/AuthProvider'
 import Swal from "sweetalert2";
+
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 
 const DetailsRoom = () => {
@@ -32,17 +34,17 @@ const DetailsRoom = () => {
         console.log(booking);
 
         fetch('http://localhost:5000/bookings', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(booking)
-    })
-        .then(res => res.json())
-        Swal.fire("Successfully Booked!", "Successfully booked room", "success")
-        .then(data => {
-            console.log(data);
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
         })
+            .then(res => res.json())
+        Swal.fire("Successfully Booked!", "Successfully booked room", "success")
+            .then(data => {
+                console.log(data);
+            })
     }
 
 
@@ -79,8 +81,13 @@ const DetailsRoom = () => {
                                         Available Seat: {available_seats}
                                     </p>
                                     <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
-                                        <p>
-                                            Rating: {rating} <Rating></Rating>
+                                        <p className="flex ">
+                                            Rating:   
+                                            <Rating
+                                                style={{ maxWidth: 100 }}
+                                                value={ rating}
+                                                readOnly
+                                            />
                                         </p>
                                     </p>
                                     <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">

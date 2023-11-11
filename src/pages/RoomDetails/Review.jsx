@@ -1,7 +1,5 @@
 
-// import Rating from "../../components/Rating/Rating";
 import { Rating } from '@smastrom/react-rating'
-
 import '@smastrom/react-rating/style.css'
 
 const Review = ({rating}) => {
@@ -21,7 +19,7 @@ const Review = ({rating}) => {
                         </div>
                     </div>
                     <Rating
-                        style={{ maxWidth: 180 }}
+                        style={{ maxWidth: 100 }}
                         value={rating}
                         readOnly
                     />
