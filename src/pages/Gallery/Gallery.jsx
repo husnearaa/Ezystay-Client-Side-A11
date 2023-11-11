@@ -17,7 +17,7 @@ const Gallery = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Gallery - Ezystay</title>
+                <title>Gallery | Ezystay</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <h2 className="lg:text-5xl text-2xl mt-15 py-10 text-center dark:text-white">Our Gallery</h2>

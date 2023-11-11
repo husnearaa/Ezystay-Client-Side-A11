@@ -25,7 +25,7 @@ const Rooms = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Rooms - Ezystay</title>
+                <title>Rooms | Ezystay</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="py-10 mt-10  text-center">

@@ -86,7 +86,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <NavLink
                             to="/aboutUs"
                             className={({ isActive, isPending }) =>
@@ -95,7 +95,7 @@ const Navbar = () => {
                         >
                             AboutUs
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
                 {/* <button className="btn border-[#C2A973] text-black bg-white px-10 rounded-full">Login</button> */}
                 <div>

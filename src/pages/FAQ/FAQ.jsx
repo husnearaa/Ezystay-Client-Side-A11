@@ -15,7 +15,7 @@ const FAQ = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>FAQ - Ezystay</title>
+                <title>FAQ | Ezystay</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="bg-zinc-100 dark:bg-zinc-700">

@@ -10,8 +10,8 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
-import RoomDetails from "../pages/RoomDetails/RoomDetails";
 import DetailsRoom from "../pages/RoomDetails/DetailsRoom";
+import AddReview from "../components/AddReview/AddReview";
 
 
 
@@ -55,10 +55,14 @@ const myCreatedRoute = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <DetailsRoom></DetailsRoom>,
+                element: <PrivateRoute><DetailsRoom></DetailsRoom></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
             },
-         
+            {
+                path:'/reviews/:id',
+                element:<AddReview></AddReview>,
+                loader:({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+            }
            
         ]
     }

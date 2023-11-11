@@ -15,7 +15,7 @@ const Home = () => {
         <div>
              <Helmet>
                 <meta charSet="utf-8" />
-                <title>Home - Ezystay</title>
+                <title>Home | Ezystay</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <Banner></Banner>

@@ -1,24 +1,52 @@
+import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
 
 
 
 const AddReview = () => {
 
+    const { user } = useContext(AuthContext);
+
 
     const handleAddReview = event => {
-        event.preventDefault();
+            event.preventDefault();
+    
+            const form = event.target;
+    
+            const name = form.name.value;
+            const email = form.email.value;
+            const rating = form.rating.value;
+            const feedback = form.feedback.value;
+    
+            const addedReview = { name, email, rating, feedback }
+    
+            console.log(addedReview);
 
-        const form = event.target;
 
-        const name = form.name.value;
-        const email = form.email.value;
-        const rating = form.rating.value;
-        const review = form.review.value;
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addedReview)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
 
-        const addedReview = { name, email, rating, review }
-
-        console.log(addedReview);
 
     }
+    
 
 
     return (
@@ -56,7 +84,7 @@ const AddReview = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold text-base text-black dark:text-white">Your Review</span>
                                 </label>
-                                <textarea name="review" id="" required cols="30" rows="6" className="dark:bg-gray-100"></textarea>
+                                <textarea name="feedback" id="" required cols="30" rows="6" className="dark:bg-gray-100"></textarea>
                             </div>
                         </div>
                         <input type="submit" value="Submit" className="btn  text-black bg-[#C2A973]  rounded-sm  w-full " />
