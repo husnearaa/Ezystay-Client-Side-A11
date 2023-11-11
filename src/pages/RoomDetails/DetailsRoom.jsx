@@ -50,12 +50,12 @@ const DetailsRoom = () => {
         <div>
             <div>
                 <div>
-                    <h2 className=" mt-10 md:text-4xl text-2xl font-semibold text-center">
+                    <h2 className=" mt-10 md:text-4xl text-2xl font-semibold text-center dark:text-white">
                         {title}
                     </h2>
-                    <div className="flex justify-center items-center h-screen">
+                    <div className="flex justify-center items-center h-screen ">
                         <div>
-                            <div className="flex w-full  md:flex-row flex-col bg-white bg-clip-border shadow-md">
+                            <div className="flex w-full  md:flex-row flex-col bg-white bg-clip-border shadow-md dark:bg-blue-gray-700">
                                 <div className="m-0 w-2/4 shrink-0 overflow-hidden rounded-r-none bg-white bg-clip-border ">
                                     <img
                                         src={image}
@@ -63,27 +63,27 @@ const DetailsRoom = () => {
                                     />
                                 </div>
                                 <div className="p-6">
-                                    <p className="mb-2 block font-sans text-2xl font-semibold leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-2xl font-semibold leading-relaxed text-gray-700 dark:text-white antialiased">
                                         {title}
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         Size: {size}
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         Price per Night: {price_per_night}
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         Special Offer: {special_offer}
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         Available Seat: {available_seats}
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         <p>
                                             Rating: {rating} <Rating></Rating>
                                         </p>
                                     </p>
-                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                                    <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         Description: {description}
                                     </p>
                                     <form onSubmit={handleBookRoom} >
@@ -95,7 +95,7 @@ const DetailsRoom = () => {
                             </div>
                         </div>
                     </div>
-                    <Review></Review>
+                    <Review rating={rating}></Review>
                 </div>
             </div>
         </div>

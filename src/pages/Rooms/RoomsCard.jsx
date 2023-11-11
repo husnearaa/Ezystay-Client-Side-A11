@@ -23,7 +23,7 @@ const RoomsCard = ({ room }) => {
     return (
         <div>
             <Link to={`/details/${_id}`} >
-                <Card className="w-full max-w-[26rem] shadow-lg rounded">
+                <Card className="w-full max-w-[26rem] shadow-lg rounded dark:bg-blue-gray-700">
                     <CardHeader floated={false} color="blue-gray" className="rounded" data-aos = "fade-right">
                         <img
                             src={image}
@@ -31,14 +31,14 @@ const RoomsCard = ({ room }) => {
                     </CardHeader>
                     <CardBody>
                         <div className="mb-3 flex items-center justify-between">
-                            <Typography variant="h5" color="blue-gray" className="font-bold">
+                            <Typography variant="h5" color="blue-gray" className="font-bold dark:text-white">
                                 {title}
                             </Typography>
                         </div>
-                        <Typography color="gray" className="flex items-center justify-between">
+                        <Typography color="gray" className="flex items-center justify-between dark:text-white">
                             {description}
                         </Typography>
-                        <Typography color="gray" className="flex items-center justify-between">
+                        <Typography color="gray" className="flex items-center justify-between dark:text-white">
                             Price: ${price_per_night}
                         </Typography>
                     </CardBody>

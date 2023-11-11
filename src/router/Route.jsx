@@ -58,6 +58,7 @@ const myCreatedRoute = createBrowserRouter([
                 element: <DetailsRoom></DetailsRoom>,
                 loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
             },
+         
            
         ]
     }

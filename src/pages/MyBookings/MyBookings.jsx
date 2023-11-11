@@ -38,17 +38,21 @@ const MyBookings = () => {
                 fetch(`http://localhost:5000/bookings/${id}`, {
                     method: "DELETE"
                 })
-                    .then((res) => {
-                        console.log(res);
-                        Swal.fire("Successfully Deleted!", "Successfully deleted from the cart", "success")
-                        const remaining = bookings.filter(booking => booking._id !== id);
-                        setBookings(remaining);
-
-                      
-                    }
-                    )
-                    .catch(error => console.log(error))
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Removed from Cart!',
+                                'Your book has been Removed.',
+                                'success'
+                            )
+                            const remaining = bookings.filter(booking => booking._id != id);
+                            setBookings(remaining);
+                        }
+                    })
             }
+
         })
     }
 
@@ -79,7 +83,7 @@ const MyBookings = () => {
 
 
     return (
-        <div>
+        <div className="mb-10">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>MyBooking - Ezystay</title>
@@ -87,16 +91,18 @@ const MyBookings = () => {
             </Helmet>
 
             {/* <h2>booking: {bookings.length}</h2> */}
-            <h2 className="lg:text-5xl text-3xl  text-center py-10">My Bookings</h2>
+            <h2 className="lg:text-5xl text-3xl  text-center py-10 dark:text-white">My Bookings</h2>
+            <div>
 
-            {
-                bookings.map(booking => <MyBookingCard
-                    key={booking._id}
-                    booking={booking}
-                    handleDelete={handleDelete}
-                    handleBookingUpdate={handleBookingUpdate}
-                ></MyBookingCard>)
-            }
+                {
+                    bookings.map(booking => <MyBookingCard
+                        key={booking._id}
+                        booking={booking}
+                        handleDelete={handleDelete}
+                        handleBookingUpdate={handleBookingUpdate}
+                    ></MyBookingCard>)
+                }
+            </div>
 
         </div>
     );
