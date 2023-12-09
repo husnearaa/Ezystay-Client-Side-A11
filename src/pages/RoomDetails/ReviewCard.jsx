@@ -4,7 +4,7 @@ import '@smastrom/react-rating/style.css'
 const ReviewCard = ({ review }) => {
 
 
-    const { name, rating, feedback } = review || {};
+    const { image, name, rating, feedback } = review || {};
 
     return (
         <div>
@@ -14,7 +14,7 @@ const ReviewCard = ({ review }) => {
                     <div className="flex justify-between p-4">
                         <div className="flex space-x-4">
                             <div>
-                                <img src="https://source.unsplash.com/100x100/?portrait"
+                                <img src={image} alt="img"
                                     className="object-cover w-12 h-12 rounded-full " />
                             </div>
                             <div>

@@ -14,7 +14,7 @@ const Gallery = () => {
     },[])
 
     return (
-        <div>
+        <div className="">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Gallery | Ezystay</title>

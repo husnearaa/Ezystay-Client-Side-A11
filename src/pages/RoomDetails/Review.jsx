@@ -8,7 +8,7 @@ const Review = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://ezystay-server-side.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
@@ -22,7 +22,7 @@ const Review = () => {
                 reviews.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
             }
 
-           
+
         </div>
     );
 };

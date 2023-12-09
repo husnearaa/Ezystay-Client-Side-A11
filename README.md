@@ -48,6 +48,6 @@ Welcome to Ezystay, your go-to Hotel Booking Website where your perfect stay is 
 - **Social Media Integration**
   - Stay connected through social media platforms for updates about the products.
 
-Feel free to visit our website: [EzyStay]
+Feel free to visit our website: [EzyStay](https://hotel-horizon.web.app)
 
 Thank you for choosing Ezystay for your enjoyable vacation!

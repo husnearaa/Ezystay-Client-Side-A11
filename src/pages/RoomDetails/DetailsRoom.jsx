@@ -12,7 +12,7 @@ const DetailsRoom = () => {
 
     const data = useLoaderData();
     console.log(data);
-    const { _id, title, image, size, price_per_night, special_offer, available_seats, rating, description } = data;
+    const { title, image, size, price_per_night, special_offer, available_seats, rating, description } = data;
     console.log(price_per_night);
 
     const { user } = useContext(AuthContext);
@@ -29,11 +29,10 @@ const DetailsRoom = () => {
             price_per_night,
             date,
             rating,
-            _id,
         }
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://ezystay-server-side.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,6 +45,8 @@ const DetailsRoom = () => {
                 console.log(data);
             })
     }
+
+
 
 
     return (
@@ -82,10 +83,10 @@ const DetailsRoom = () => {
                                     </p>
                                     <p className="mb-2 block font-sans text-base font-normal leading-relaxed text-gray-700 dark:text-white antialiased">
                                         <p className="flex ">
-                                            Rating:   
+                                            Rating:
                                             <Rating
                                                 style={{ maxWidth: 100 }}
-                                                value={ rating}
+                                                value={rating}
                                                 readOnly
                                             />
                                         </p>

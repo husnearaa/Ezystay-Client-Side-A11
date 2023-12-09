@@ -23,7 +23,7 @@ const myCreatedRoute = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>,    
+                element: <Home></Home>,
             },
             {
                 path: '/rooms',
@@ -56,14 +56,14 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <PrivateRoute><DetailsRoom></DetailsRoom></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://ezystay-server-side.vercel.app/details/${params.id}`)
             },
             {
-                path:'/reviews/:id',
-                element:<AddReview></AddReview>,
-                loader:({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                path: '/reviews/:id',
+                element: <AddReview></AddReview>,
+                loader: ({ params }) => fetch(`https://ezystay-server-side.vercel.app/reviews/${params.id}`)
             }
-           
+
         ]
     }
 ])
